@@ -4,7 +4,7 @@ import * as os from "os";
 import Serverless = require("serverless");
 import { Provider } from "../models/provider";
 import { getSelectedProviders, isEmpty } from "../shared/utils";
-import { executeTransformation } from "../transforms/transformation";
+import { executeConditionalCompilation, executeTransformation } from "../transforms/transformation";
 
 export class CompileService {
 
@@ -87,5 +87,6 @@ export class CompileService {
     const serverName = this.serverless.service.custom['serverlessAgnostic'].serverName || 'app';
     const serverFilePath = path.join(tempDirPath, serverFile);
     executeTransformation(provider.name, serverFilePath, handlerName, serverName);
+    executeConditionalCompilation(provider.name, tempDirPath);
   }
 }
