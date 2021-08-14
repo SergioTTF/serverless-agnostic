@@ -1,5 +1,5 @@
 # serverless-agnostic
-A Serverless Framework Plugin to build provider agnostic serverless express.js applications.
+A Serverless Framework Plugin to build provider agnostic serverless express.js applications. This plugin uses `jscodeshift` to perform transpilations(source-to-source compilations) in Javascript files, in order to adapt them to work with the different serverless providers. The library `serverless-http`is also used for enabling express routing in AWS Lambda specific handler format.
 
 ## 1. Installation
 
