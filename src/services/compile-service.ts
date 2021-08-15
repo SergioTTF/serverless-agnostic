@@ -53,8 +53,8 @@ export class CompileService {
       if(provider.name === 'aws') {
         packageJson.dependencies["serverless-http"] = "^2.7.0";
       }
-      delete packageJson.dependencies["sls-plugin"];
-      delete packageJson.devDependencies["sls-plugin"];
+      delete packageJson.dependencies["serverless-agnostic"];
+      delete packageJson.devDependencies["serverless-agnostic"];
       fs.writeFileSync(packagePath, JSON.stringify(packageJson, null, 4));
     })
     
