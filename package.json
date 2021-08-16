@@ -1,6 +1,6 @@
 {
   "name": "serverless-agnostic",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A Serverless Framework Plugin to build provider agnostic serverless express.js applications.",
   "main": "dist/src/index.js",
   "scripts": {
